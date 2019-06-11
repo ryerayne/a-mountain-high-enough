@@ -193,43 +193,83 @@ end
 user_trails_list = {
     {
       :user_id => 1,
-      :mountain_id => 1
+      :trail_id => 1
     },
     {
       :user_id => 1,
-      :mountain_id => 2
+      :trail_id => 2
     },
     {
       :user_id => 1,
-      :mountain_id => 3
+      :trail_id => 3
     },
     {
       :user_id => 2,
-      :mountain_id => 4
+      :trail_id => 4
     },
     {
       :user_id => 2,
-      :mountain_id => 5
+      :trail_id => 5
     }
     {
       :user_id => 3,
-      :mountain_id => 1
+      :trail_id => 1
     },
     {
       :user_id => 3,
-      :mountain_id => 2
+      :trail_id => 2
     },
     {
       :user_id => 3,
-      :mountain_id => 4
+      :trail_id => 4
     },
     {
       :user_id => 4,
-      :mountain_id => 3
+      :trail_id => 3
     },
     {
       :user_id => 5,
-      :mountain_id => 3
+      :trail_id => 3
+    }
+    {
+      :user_id => 1,
+      :trail_id => 6
+    },
+    {
+      :user_id => 1,
+      :trail_id => 7
+    },
+    {
+      :user_id => 1,
+      :trail_id => 8
+    },
+    {
+      :user_id => 2,
+      :trail_id => 9
+    },
+    {
+      :user_id => 2,
+      :trail_id => 10
+    },
+    {
+      :user_id => 3,
+      :trail_id => 6
+    },
+    {
+      :user_id => 3,
+      :trail_id => 7
+    },
+    {
+      :user_id => 3,
+      :trail_id => 8
+    },
+    {
+      :user_id => 4,
+      :trail_id => 9
+    },
+    {
+      :user_id => 5,
+      :trail_id => 10
     }
   }
 
