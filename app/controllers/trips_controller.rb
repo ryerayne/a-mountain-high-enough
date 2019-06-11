@@ -24,10 +24,21 @@ class TripsController < ApplicationController
   end
 
   get "/trips/:id/edit" do
+    @trip = Trip.find_by_id(params[:id])
+    @trails = Trail.all
     erb :"/trips/edit.html"
   end
 
   patch "/trips/:id" do
+    @trip = Trip.find_by_id(params[:id])
+    @trip.trail = Trail.find_by_id(params[:trail_id])
+    @trip.name = params[:name]
+    @trip.year = params[:year]
+    @trip.month = params[:month]
+    @trip.day = params[:day]
+    @trip.notes = params[:notes]
+    @trip.save
+
     redirect "/trips/:id"
   end
 
