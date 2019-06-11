@@ -1,17 +1,17 @@
 class UsersController < ApplicationController
 
   get '/signup' do
-    "Hello and sign up here"
-#    if session[:user_id]
-#      redirect :'/mountains'
-#    else
-#      erb :'/users/signup'
-#    end
+    if session[:user_id]
+      redirect :'/mountains'
+    else
+      erb :'/users/signup'
+    end
   end
 
   post '/signup' do
-    if !params[:username].empty? && !params[:email].empty? && !params[:password].empty?
+    if !params[:username].empty? && !params[:password].empty?
       @user = User.create(params)
+      binding.pry
       session[:user_id] = @user.id
       redirect '/tweets'
     else
