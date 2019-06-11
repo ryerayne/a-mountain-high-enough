@@ -11,9 +11,8 @@ class UsersController < ApplicationController
   post '/signup' do
     if !params[:username].empty? && !params[:password].empty?
       @user = User.create(params)
-      binding.pry
       session[:user_id] = @user.id
-      redirect '/tweets'
+      redirect '/mountains'
     else
       redirect '/users/signup'
     end
