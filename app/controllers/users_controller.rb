@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 
   get '/signup' do
     if session[:user_id]
-      redirect :'/mountains'
+      redirect :'/homepage'
     else
       erb :'/users/signup'
     end
@@ -12,10 +12,14 @@ class UsersController < ApplicationController
     if !params[:username].empty? && !params[:password].empty?
       @user = User.create(params)
       session[:user_id] = @user.id
-      redirect '/mountains'
+      redirect '/homepage'
     else
       redirect '/users/signup'
     end
+  end
+
+  get '/homepage' do
+    erb :'/homepage'
   end
 
   get '/login' do
