@@ -12,7 +12,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/" do
-    "A Mountain High Enough"
+    erb :"/welcome"
   end
 
   helpers do

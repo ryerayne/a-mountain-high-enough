@@ -32,7 +32,7 @@ class UsersController < ApplicationController
 
   post '/login' do
     @user = User.find_by(:username => params[:username])
-
+    binding.pry
     if @user && @user.authenticate(params[:password])
       session[:user_id] = @user.id
       redirect '/homepage'
@@ -44,25 +44,6 @@ class UsersController < ApplicationController
   get '/logout' do
     session.clear
     redirect '/'
-  end
-
-# haven't edited yet
-
-  get '/users/:user_slug' do
-    erb :'/users/show'
-  end
-
-
-  get "/users/:id" do
-    erb :"/users/show.html"
-  end
-
-  get "/users/:id/edit" do
-    erb :"/users/edit.html"
-  end
-
-  patch "/users/:id" do
-    redirect "/users/:id"
   end
 
 end
