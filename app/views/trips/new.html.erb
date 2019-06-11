@@ -1,0 +1,27 @@
+<h1>Create a New Trip</h1>
+<form action="/trips" method="POST">
+  <label>Name</label>
+  <br>
+  <input type="text" name="name" id="name">
+  <br>
+  <label>Trail</label>
+   <br>
+  <%@trails.each do |trail|%>
+      <input type="radio" name="trail_id" value="<%=trail.id%>" id="<%=trail.id%>"><%=trail.name%></input>
+  <%end%>
+  <br>
+  <label>Month (Enter 1 - 12)</label>
+    <input type="number" name="month" id="month" min = "1" max = "12"></input>
+  <br>
+  <label>Day</label>
+    <input type="number" name="day" id="day" min = "1" max = "31"></input>
+  <br>
+  <label>Year (xxxx)</label>
+    <input type="number" name="year" id="year" min = "1800" max = "2200"></input>
+  <br>
+  <label>Notes</label>
+  <br>
+  <input type="text" name="notes" id="notes">
+  <br>
+  <input type="submit" value="Create" id="Create">
+</form>

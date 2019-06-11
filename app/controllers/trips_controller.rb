@@ -6,6 +6,7 @@ class TripsController < ApplicationController
   end
 
   get "/trips/new" do
+    @trails = Trail.all
     erb :"/trips/new.html"
   end
 
