@@ -1,0 +1,25 @@
+<h2>Create a New Trip</h2>
+<form action="/trips/<%=@trip.id%>" method="POST">
+  <input id="hidden" type="hidden" name="_method" value="patch">
+  <p><label>Name</label>
+  <input type="text" name="name" id="name" value="<%=@trip.name%>"></input></p>
+
+  <p><label>Trail</label></p>
+  <%@trails.each do |trail|%>
+      <li><input type="radio" name="trail_id" value="<%=trail.id%>" id="<%=trail.id%>" <%='checked' if @trip.trail.include?(trail) %>><%=trail.name%></input></li>
+  <%end%>
+  <br>
+  <p><label>Month (Enter 1 - 12)</label>
+    <input type="number" name="month" id="month" min = "1" max = "12" value="<%=@trip.month%>"></input></p>
+
+  <p><label>Day</label>
+    <input type="number" name="day" id="day" min = "1" max = "31" value="<%=@trip.day%>"></input></p>
+
+  <p><label>Year (xxxx)</label>
+    <input type="number" name="year" id="year" min = "1800" max = "2200" value="<%=@trip.year%>"></input></p>
+
+  <p><label>Notes</label>
+  <input type="text" name="notes" id="notes" value="<%=@trip.notes%>"></p>
+
+  <input type="submit" value="Submit" id="submit">
+</form>
