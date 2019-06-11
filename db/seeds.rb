@@ -140,20 +140,45 @@ trails_list.each do |name, trail_hash|
 end
 
 user_mountains_list = {
-    "Rye Rayne" => {
-
+    {
+      :user_id => 1,
+      :mountain_id => 1
     },
-    "Liz Willow" => {
-
+    {
+      :user_id => 1,
+      :mountain_id => 2
     },
-    "Mari Williams" => {
-
+    {
+      :user_id => 1,
+      :mountain_id => 3
     },
-    "Arin VanDyke" => {
-
+    {
+      :user_id => 2,
+      :mountain_id => 4
     },
-    "Lucas Smiley" => {
-
+    {
+      :user_id => 2,
+      :mountain_id => 5
+    }
+    {
+      :user_id => 3,
+      :mountain_id => 1
+    },
+    {
+      :user_id => 3,
+      :mountain_id => 2
+    },
+    {
+      :user_id => 3,
+      :mountain_id => 4
+    },
+    {
+      :user_id => 4,
+      :mountain_id => 3
+    },
+    {
+      :user_id => 5,
+      :mountain_id => 3
     }
   }
 
@@ -166,20 +191,45 @@ user_mountains_list.each do |user_mountain_hash|
 end
 
 user_trails_list = {
-    "Rye Rayne" => {
-
+    {
+      :user_id => 1,
+      :mountain_id => 1
     },
-    "Liz Willow" => {
-
+    {
+      :user_id => 1,
+      :mountain_id => 2
     },
-    "Mari Williams" => {
-
+    {
+      :user_id => 1,
+      :mountain_id => 3
     },
-    "Arin VanDyke" => {
-
+    {
+      :user_id => 2,
+      :mountain_id => 4
     },
-    "Lucas Smiley" => {
-
+    {
+      :user_id => 2,
+      :mountain_id => 5
+    }
+    {
+      :user_id => 3,
+      :mountain_id => 1
+    },
+    {
+      :user_id => 3,
+      :mountain_id => 2
+    },
+    {
+      :user_id => 3,
+      :mountain_id => 4
+    },
+    {
+      :user_id => 4,
+      :mountain_id => 3
+    },
+    {
+      :user_id => 5,
+      :mountain_id => 3
     }
   }
 
