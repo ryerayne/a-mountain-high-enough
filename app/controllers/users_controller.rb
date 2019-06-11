@@ -24,7 +24,7 @@ class UsersController < ApplicationController
 
   get '/login' do
     if session[:user_id]
-      redirect :'/tweets'
+      redirect :'/homepage'
     else
       erb :'/users/login'
     end
@@ -35,7 +35,7 @@ class UsersController < ApplicationController
 
     if @user && @user.authenticate(params[:password])
       session[:user_id] = @user.id
-      redirect '/tweets'
+      redirect '/homepage'
     else
       redirect '/login'
     end
