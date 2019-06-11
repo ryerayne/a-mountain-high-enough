@@ -11,6 +11,8 @@ class TripsController < ApplicationController
   end
 
   post "/trips" do
+    @trip = Trip.new(params)
+    @trip.save
     redirect "/trips"
   end
 
