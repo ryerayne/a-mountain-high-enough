@@ -9,7 +9,7 @@ class UsersController < ApplicationController
   end
 
   post '/signup' do
-    if valid_new_username(params[:username]) && !params[:password].empty
+    if valid_new_username(params[:username]) && !params[:password].empty?
       @user = User.create(params)
       session[:user_id] = @user.id
       redirect '/homepage'
