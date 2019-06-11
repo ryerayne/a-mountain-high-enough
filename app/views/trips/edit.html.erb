@@ -1,12 +1,12 @@
-<h2>Create a New Trip</h2>
+<h2>Edit Trip</h2>
 <form action="/trips/<%=@trip.id%>" method="POST">
-  <input id="hidden" type="hidden" name="_method" value="patch">
+<input id="hidden" type="hidden" name="_method" value="patch">
   <p><label>Name</label>
   <input type="text" name="name" id="name" value="<%=@trip.name%>"></input></p>
 
   <p><label>Trail</label></p>
   <%@trails.each do |trail|%>
-      <li><input type="radio" name="trail_id" value="<%=trail.id%>" id="<%=trail.id%>" <%='checked' if @trip.trail.include?(trail) %>><%=trail.name%></input></li>
+      <li><input type="radio" name="trail_id" value="<%=trail.id%>" id="<%=trail.id%>" <%='checked' if @trip.trail == trail %>><%=trail.name%></input></li>
   <%end%>
   <br>
   <p><label>Month (Enter 1 - 12)</label>
