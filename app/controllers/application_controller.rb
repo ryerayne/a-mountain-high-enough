@@ -15,4 +15,12 @@ class ApplicationController < Sinatra::Base
     "A Mountain High Enough"
   end
 
+  helpers do
+
+    def valid_new_username(username)
+      !User.find_by(:username => username) && !params[:username].empty?
+    end
+
+  end
+
 end
