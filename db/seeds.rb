@@ -2,27 +2,27 @@ users_list = {
     "Rye Rayne" => {
       :username => "ryerayne",
       :email => "ryerayne@hotmail.com",
-      :password => "safepassword"
+      :password_digest => "safepassword"
     },
     "Liz Willow" => {
       :username => "lizwillow",
       :email => "lizwillow@hotmail.com",
-      :password => "anotherpassword"
+      :password_digest => "anotherpassword"
     },
     "Mari Williams" => {
       :username => "mariwilliams",
       :email => "mariwilliams@hotmail.com",
-      :password => "neverguessit"
+      :password_digest => "neverguessit"
     },
     "Arin VanDyke" => {
       :username => "arinvandyke",
       :email => "arinvandyke@hotmail.com",
-      :password => "secretpassword"
+      :password_digest => "secretpassword"
     },
     "Lucas Smiley" => {
       :username => "lucassmiley",
       :email => "lucassmiley@hotmail.com",
-      :password => "cantguessme"
+      :password_digest => "cantguessme"
     }
   }
 
