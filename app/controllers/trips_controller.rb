@@ -42,6 +42,10 @@ class TripsController < ApplicationController
     redirect "/trips/:id"
   end
 
+  post "/trips/:id" do
+    binding.pry
+  end
+
   delete "/trips/:id/delete" do
     redirect "/trips"
   end
