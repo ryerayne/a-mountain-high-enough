@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 
   get '/signup' do
     if session[:user_id]
-      redirect :'/tweets'
+      redirect :'/mountains'
     else
       erb :'/users/signup'
     end
