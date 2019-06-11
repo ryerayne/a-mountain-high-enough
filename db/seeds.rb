@@ -78,27 +78,62 @@ mountains_list.each do |name, mountain_hash|
 end
 
 trails_list = {
-    "Rye Rayne" => {
-
+    "The Old Route" => {
+      :length => "8 miles",
+      :difficulty => "easy",
+      :mountain_id => 1
     },
-    "Liz Willow" => {
-
+    "The New Route" => {
+      :length => "7 miles",
+      :difficulty => "easy",
+      :mountain_id => 2
     },
-    "Mari Williams" => {
-
+    "Wizard's Way" => {
+      :length => "7 miles",
+      :difficulty => "easy",
+      :mountain_id => 3
     },
-    "Arin VanDyke" => {
-
+    "The Unicorn Trail" => {
+      :length => "16 miles",
+      :difficulty => "moderate",
+      :mountain_id => 4
     },
-    "Lucas Smiley" => {
-
+    "Cloud View Path" => {
+      :length => "15 miles",
+      :difficulty => "moderate",
+      :mountain_id => 5
+    },
+    "The Bucket List Trail" => {
+      :length => "23 miles",
+      :difficulty => "moderate",
+      :mountain_id => 1
+    },
+    "Friends in High Place Route" => {
+      :length => "2 miles",
+      :difficulty => "strenous",
+      :mountain_id => 1
+    },
+    "Ten Miler Way" => {
+      :length => "10 miles",
+      :difficulty => "strenous",
+      :mountain_id => 2
+    },
+    "A New Path" => {
+      :length => "3 miles",
+      :difficulty => "strenous",
+      :mountain_id => 3
+    },
+    "This Way or the Highway" => {
+      :length => "10 miles",
+      :difficulty => "moderate",
+      :mountain_id => 3
     }
   }
 
-trails_list.each do |name, user_hash|
-  p = User.new
+trails_list.each do |name, trail_hash|
+  p = Trail.new
   p.name = name
-  user_hash.each do |attribute, value|
+  trail_hash.each do |attribute, value|
       p[attribute] = value
   end
   p.save
@@ -122,9 +157,8 @@ user_mountains_list = {
     }
   }
 
-user_mountains_list.each do |name, user_mountain_hash|
+user_mountains_list.each do |user_mountain_hash|
   p = UserMountain.new
-  p.name = name
   user_mountain_hash.each do |attribute, value|
       p[attribute] = value
   end
@@ -149,9 +183,9 @@ user_trails_list = {
     }
   }
 
-user_trails_list.each do |name, user_trails_hash|
+user_trails_list.each do |user_trail_hash|
   p = UserTrail.new
-  user_trails_hash.each do |attribute, value|
+  user_trail_hash.each do |attribute, value|
       p[attribute] = value
   end
   p.save
