@@ -76,3 +76,110 @@ mountains_list.each do |name, mountain_hash|
   end
   p.save
 end
+
+trails_list = {
+    "Rye Rayne" => {
+
+    },
+    "Liz Willow" => {
+
+    },
+    "Mari Williams" => {
+
+    },
+    "Arin VanDyke" => {
+
+    },
+    "Lucas Smiley" => {
+
+    }
+  }
+
+trails_list.each do |name, user_hash|
+  p = User.new
+  p.name = name
+  user_hash.each do |attribute, value|
+      p[attribute] = value
+  end
+  p.save
+end
+
+user_mountains_list = {
+    "Rye Rayne" => {
+
+    },
+    "Liz Willow" => {
+
+    },
+    "Mari Williams" => {
+
+    },
+    "Arin VanDyke" => {
+
+    },
+    "Lucas Smiley" => {
+
+    }
+  }
+
+user_mountains_list.each do |name, user_mountain_hash|
+  p = UserMountain.new
+  p.name = name
+  user_mountain_hash.each do |attribute, value|
+      p[attribute] = value
+  end
+  p.save
+end
+
+user_trails_list = {
+    "Rye Rayne" => {
+
+    },
+    "Liz Willow" => {
+
+    },
+    "Mari Williams" => {
+
+    },
+    "Arin VanDyke" => {
+
+    },
+    "Lucas Smiley" => {
+
+    }
+  }
+
+user_trails_list.each do |name, user_trails_hash|
+  p = UserTrail.new
+  user_trails_hash.each do |attribute, value|
+      p[attribute] = value
+  end
+  p.save
+end
+
+trips_list = {
+    "Rye Rayne" => {
+
+    },
+    "Liz Willow" => {
+
+    },
+    "Mari Williams" => {
+
+    },
+    "Arin VanDyke" => {
+
+    },
+    "Lucas Smiley" => {
+
+    }
+  }
+
+trips_list.each do |name, trip_hash|
+  p = Trip.new
+  p.name = name
+  trip_hash.each do |attribute, value|
+      p[attribute] = value
+  end
+  p.save
+end
