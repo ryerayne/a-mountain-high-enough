@@ -1,4 +1,4 @@
-class TrailsController < ApplicationController
+class TripsController < ApplicationController
 
   get "/trips" do
     @trips = Trip.find_by(:user_id => session[:user_id])
