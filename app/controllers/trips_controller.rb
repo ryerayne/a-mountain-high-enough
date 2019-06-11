@@ -1,6 +1,7 @@
 class TrailsController < ApplicationController
 
   get "/trips" do
+    @trips = Trip.find_by(:user_id => session[:user_id])
     erb :"/trips/index.html"
   end
 

@@ -1,0 +1,8 @@
+<h1>Your Trips</h1>
+<%@trips.each do |song|%>
+<p><%=trip.name%></p>
+<p>Trail: <%=trip.trail.name%></p>
+<p><%=trip.month%> <%=trip.day%>, <%=trip.year%></p>
+<a href=<%="/trips/#{trip.id}"%>>View Trip</a>
+~~~~~~~~~~~~~~~~~~~~~~~~
+<%end%>
