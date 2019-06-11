@@ -19,6 +19,7 @@ class TripsController < ApplicationController
   end
 
   get "/trips/:id" do
+    @trip = Trip.find_by_id(params[:id])
     erb :"/trips/show.html"
   end
 

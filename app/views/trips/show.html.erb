@@ -1,0 +1,7 @@
+<h3><%=@trip.name%></h3>
+<ul>Trail: <%=@trip.trail.name%></ul>
+<ul>User: <%=@trip.user.username%></ul>
+<ul>Date: <%=@trip.month%>/<%=@trip.day%>/<%=@trip.year%></ul>
+<ul>Notes: <%=@trip.notes%></ul>
+<a href=<%="/trips/#{@trip.id}"%>>Edit Trip</a>
+<a href=<%="/trips/#{@trip.id}"%>>Delete Trip</a>
