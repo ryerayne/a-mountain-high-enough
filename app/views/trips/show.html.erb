@@ -3,5 +3,10 @@
 <ul>User: <%=@trip.user.username%></ul>
 <ul>Date: <%=@trip.month%>/<%=@trip.day%>/<%=@trip.year%></ul>
 <ul>Notes: <%=@trip.notes%></ul>
+
 <a href=<%="/trips/#{@trip.id}/edit"%>>Edit Trip</a>
-<a href=<%="/trips/#{@trip.id}/delete"%>>Delete Trip</a>
+
+<form action="/trips/#{@trip.id}/delete" method="post">
+  <input id="hidden" type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete Trip">
+</form>
