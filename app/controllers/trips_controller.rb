@@ -1,7 +1,7 @@
 class TripsController < ApplicationController
 
   get "/trips" do
-    @trips = Trip.find_by(:user_id => session[:user_id])
+    @trips = Trip.all
     erb :"/trips/index.html"
   end
 
@@ -12,7 +12,9 @@ class TripsController < ApplicationController
 
   post "/trips" do
     @trip = Trip.new(params)
+    @trip.user = User.find_by_id(session[:user_id])
     @trip.save
+
     redirect "/trips"
   end
 
