@@ -139,7 +139,7 @@ trails_list.each do |name, trail_hash|
   p.save
 end
 
-user_mountains_list = {
+user_mountains_list = [
     {
       :user_id => 1,
       :mountain_id => 1
@@ -159,7 +159,7 @@ user_mountains_list = {
     {
       :user_id => 2,
       :mountain_id => 5
-    }
+    },
     {
       :user_id => 3,
       :mountain_id => 1
@@ -180,7 +180,7 @@ user_mountains_list = {
       :user_id => 5,
       :mountain_id => 3
     }
-  }
+  ]
 
 user_mountains_list.each do |user_mountain_hash|
   p = UserMountain.new
@@ -190,7 +190,7 @@ user_mountains_list.each do |user_mountain_hash|
   p.save
 end
 
-user_trails_list = {
+user_trails_list = [
     {
       :user_id => 1,
       :trail_id => 1
@@ -210,7 +210,7 @@ user_trails_list = {
     {
       :user_id => 2,
       :trail_id => 5
-    }
+    },
     {
       :user_id => 3,
       :trail_id => 1
@@ -230,7 +230,7 @@ user_trails_list = {
     {
       :user_id => 5,
       :trail_id => 3
-    }
+    },
     {
       :user_id => 1,
       :trail_id => 6
@@ -271,7 +271,7 @@ user_trails_list = {
       :user_id => 5,
       :trail_id => 10
     }
-  }
+  ]
 
 user_trails_list.each do |user_trail_hash|
   p = UserTrail.new
@@ -321,7 +321,7 @@ trips_list = {
       :month => 2,
       :day => 14,
       :notes => "rainy and romantic"
-    }
+    },
     "Fourth of July Hike" => {
       :user_id => 3,
       :trail_id => 6,
