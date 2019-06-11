@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class TripsController < ApplicationController
 
   get '/signup' do
     if session[:user_id]
