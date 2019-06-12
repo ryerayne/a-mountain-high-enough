@@ -24,6 +24,7 @@ class TripsController < ApplicationController
   end
 
   get "/trips/:id/edit" do
+    redirect_if_not_current_users_resource(params[:id])
     @trip = Trip.find_by_id(params[:id])
     @trails = Trail.all
     erb :"/trips/edit.html"
@@ -43,6 +44,7 @@ class TripsController < ApplicationController
   end
 
   delete "/trips/:id/delete" do
+    redirect_if_not_current_users_resource(params[:id])
     @trip = Trip.find_by_id(params[:id])
     @trip.delete
     redirect "/trips"
