@@ -35,6 +35,13 @@ class ApplicationController < Sinatra::Base
       User.find(session[:user_id])
     end
 
+    def redirect_if_not_current_users_resource(id)
+      trip = Trip.find_by_id(params[:id])
+      if current_user != trip.user
+        redirect "/homepage"
+      end
+    end
+
   end
 
 end
