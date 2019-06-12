@@ -42,6 +42,10 @@ class ApplicationController < Sinatra::Base
       end
     end
 
+    def check_trip_data(params)
+      params[:name].empty? || params[:trail_id].empty? || params[:month].empty? || params[:day].empty? || params[:year].empty?
+    end
+
   end
 
 end

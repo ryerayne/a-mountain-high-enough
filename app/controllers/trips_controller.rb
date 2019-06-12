@@ -11,11 +11,16 @@ class TripsController < ApplicationController
   end
 
   post "/trips" do
-    @trip = Trip.new(params)
-    @trip.user = User.find_by_id(session[:user_id])
-    @trip.save
+    binding.pry
+    if params[:name].empty? || params[:trail_id].empty?
+      redirect "/trips/new"
+    else
+      @trip = Trip.new(params)
+      @trip.user = User.find_by_id(session[:user_id])
+      @trip.save
 
-    redirect "/trips"
+      redirect "/trips"
+    end
   end
 
   get "/trips/:id" do
