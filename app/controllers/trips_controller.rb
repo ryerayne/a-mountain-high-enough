@@ -39,10 +39,12 @@ class TripsController < ApplicationController
     @trip.notes = params[:notes]
     @trip.save
 
-    redirect "/trips/:id"
+    erb :"/trips/show.html"
   end
 
   delete "/trips/:id/delete" do
+    @trip = Trip.find_by_id(params[:id])
+    @trip.delete
     redirect "/trips"
   end
 end
