@@ -7,12 +7,11 @@ Specs:
 [x] Include more than one model class (e.g. User, Post, Category)- Includes User, Mountain, Trail, and Trip
 [x] Include at least one has_many relationship on your User model (e.g. User has_many Posts)- Mountains have many trails
 [x] Include at least one belongs_to relationship on another model (e.g. Post belongs_to User)- Trips belong to a User
-[x] Include user accounts with unique login attribute (username or email)
-[] Ensure that the belongs_to resource has routes for Creating, Reading, Updating and Destroying
-[] Ensure that users can't modify content created by other users
-[] Include user input validations
-[] BONUS - not required - Display validation failures to user with error message (example form URL e.g. /posts/new)
-[] Your README.md includes a short description, install instructions, a contributors guide and a link to the license for your code
+[x] Include user accounts with unique login attribute (username)
+[x] Ensure that the belongs_to resource has routes for Creating, Reading, Updating and Destroying. Users can create new trips, view an index of all trips and show pages for individual trips, edit trips, and delete trips.
+[x] Ensure that users can't modify content created by other users. Users can view trips of other users, but they cannot edit or delete them.
+[x] Include user input validations. Username and password are validated upon signup, and Trip name, trail_id, and date are validated upon creation.
+[x] Your README.md includes a short description, install instructions, a contributors guide and a link to the license for your code
 
 Confirm
 
