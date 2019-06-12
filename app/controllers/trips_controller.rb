@@ -11,8 +11,7 @@ class TripsController < ApplicationController
   end
 
   post "/trips" do
-    binding.pry
-    if params[:name].empty? || params[:trail_id].empty?
+    if trip_data_invalid
       redirect "/trips/new"
     else
       @trip = Trip.new(params)
