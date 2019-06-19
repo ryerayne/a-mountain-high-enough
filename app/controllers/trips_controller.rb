@@ -28,14 +28,17 @@ class TripsController < ApplicationController
   end
 
   get "/trips/:id/edit" do
-    redirect_if_not_current_users_resource(params[:id])
     @trip = Trip.find_by_id(params[:id])
+    redirect_if_not_current_users_resource(@trip)
     @trails = Trail.all
     erb :"/trips/edit.html"
   end
 
   patch "/trips/:id" do
     @trip = Trip.find_by_id(params[:id])
+
+    redirect_if_not_current_users_resource(@trip)
+
     @trip.trail = Trail.find_by_id(params[:trail_id])
     @trip.name = params[:name]
     @trip.year = params[:year]
@@ -48,8 +51,8 @@ class TripsController < ApplicationController
   end
 
   delete "/trips/:id/delete" do
-    redirect_if_not_current_users_resource(params[:id])
     @trip = Trip.find_by_id(params[:id])
+    redirect_if_not_current_users_resource(@trip)
     @trip.delete
     redirect "/trips"
   end

@@ -1,4 +1,16 @@
 <h2>Welcome, <%=@user.username%>!</h2>
+
+<h3>Your Trips</h3>
+
+<%@user_trips.each do |trip|%>
+<h4><%=trip.name%></h4>
+<li>Trail: <%=trip.trail.name%></li>
+<li><%=trip.month%>/<%=trip.day%>/<%=trip.year%></li>
+<a href=<%="/trips/#{trip.id}"%>>View Trip</a>
+<br></br>
+<%end%>
+<br>
+
 <p><a href="/trips">View Trips</a></p>
 <p><a href="/trips/new">Create New Trip</a></p>
 <p><a href="/logout">Log Out</a></p>
